@@ -1,5 +1,7 @@
-
-
+@import url('facil.css');
+@import url('medio.css');
+@import url('dificil.css');
+@import url('impossivel.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 
 
@@ -11,8 +13,8 @@
 body{
     display: flex;
     flex-direction: column;
-    margin: 1rem;
     min-height: 100vh;
+    background-color: #F1EEDC;
 }
 nav{
     margin: 1rem;
@@ -28,7 +30,7 @@ h1{
     text-align: center;
     font-size: 3.5rem;
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
-    color: red;
+    color: #F1EEDC;
 }
 .subtitulo{
     margin: 2rem 0;
@@ -54,34 +56,14 @@ nav a{
     color: white;
     background: linear-gradient(to right,#8f1111, #e05a5a);
     z-index: 1;
-}
-nav span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95px;
-    height: 100%;
-    border-radius: 8px;
-    transition: 0.5s ease;
-    z-index: 2;
-}
-nav a:nth-child(1):hover ~ span {
-    left: 0;
-}
-nav a:nth-child(2):hover ~ span {
-    left: 95px;
-}
-nav a:nth-child(3):hover ~ span {
-    left: 189px;
-    width: 110px;
-}
-nav a:nth-child(4):hover ~ span {
-    left: 413px;
-    width: 110px;
+    padding: 10px;
+    border-radius: 5px;
 }
 footer{
     margin: 2rem 0;
+    padding: 20px;
+    background-color: #B3C8CF;
 }
 small{
-    color:aqua;
+    color:white;
 }
