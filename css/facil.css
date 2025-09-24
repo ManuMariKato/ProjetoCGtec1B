@@ -1,10 +1,3 @@
-@import url('facil.css');
-@import url('medio.css');
-@import url('dificil.css');
-@import url('impossivel.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
-
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -79,4 +72,5 @@ footer{
 }
 small{
     color: #FFFBDE;
+
 }
