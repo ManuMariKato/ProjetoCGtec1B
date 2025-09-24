@@ -10,11 +10,17 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primeiro-azul: #129990;
+    --secunda-azul: #FFE100;
+    --terceiro-azul: #FF9B00;
+    --quarto-azul: #DC143C;
+}
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #F1EEDC;
+    background:linear-gradient(-97.54deg, #FEBBCC, #f98da8);
 }
 nav{
     margin: 1rem;
@@ -25,7 +31,7 @@ nav{
 }
 nav a {
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 8px 25px;
     margin: 40px 15px;
     border-radius: 10px;
     color: white;
@@ -34,40 +40,45 @@ h1{
     text-align: center;
     font-size: 3.5rem;
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
-    color: #F1EEDC;
+    color: #f98da8;
+    background-color: #FFEECC;
 }
 .subtitulo{
-    margin: 2rem 0;
-    margin-left: 15rem;
+    margin: 2rem 12rem;
     font-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
-    text-align: left;
-}
-#exemplo_span{
-    text-align: left;
+    
+    color:#FFEECC;
 }
 .texto_main {
-    margin-left: 15rem;
+    margin: 0 12rem;
     font-size: 1.5rem;
-    text-align: left;
+    color: white;
+}
+#texto_main2{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
 #botao_facil{
-    background-color: rgb(0, 176, 0);
+    background-color: var(--primeiro-azul);
 }
 #botao_medio{
-    background-color: rgb(238, 238, 3);
+    background-color: var(--secunda-azul);
 }
 #botao_dificil{
-    background-color: red;
+    background-color: var(--terceiro-azul);
 }
 #botao_impossivel{
-    background-color: rgb(44, 44, 44);
+    background-color: var(--quarto-azul);
 }
 footer{
-    margin: 8rem 0;
     padding: 30px;
-    background-color: #B3C8CF;
+    background-color: #FFEECC;
+    text-align: center;
 }
 small{
-    color:white;
+    color:#f98da8;
+    
 }
