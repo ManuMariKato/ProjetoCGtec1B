@@ -19,12 +19,16 @@ body{
 nav{
     margin: 1rem;
     position: relative;
-    width: 524px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+}
+nav a {
+    text-decoration: none;
+    padding: 8px 18px;
+    margin: 40px 15px;
+    border-radius: 10px;
+    color: white;
 }
 h1{
     text-align: center;
@@ -47,21 +51,21 @@ h1{
     font-size: 1.5rem;
     text-align: left;
 }
-nav a{
-    position: relative;
-    display: inline-block;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 0 23px;
-    color: white;
-    background: linear-gradient(to right,#8f1111, #e05a5a);
-    z-index: 1;
-    padding: 10px;
-    border-radius: 5px;
+#botao_facil{
+    background-color: rgb(0, 176, 0);
+}
+#botao_medio{
+    background-color: rgb(238, 238, 3);
+}
+#botao_dificil{
+    background-color: red;
+}
+#botao_impossivel{
+    background-color: rgb(44, 44, 44);
 }
 footer{
-    margin: 2rem 0;
-    padding: 20px;
+    margin: 8rem 0;
+    padding: 30px;
     background-color: #B3C8CF;
 }
 small{
