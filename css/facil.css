@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+:root{
+    --cor-primaria: #90e3e0;
+    --cor-secundaria: #0d6963;
+    --cor-terciaria: #129990;
+    --cor-sombra: #05413f;
 }
 header{
     padding: 10px;
@@ -32,21 +39,97 @@ h1{
     text-align: center;
     font-size: 3.2rem;
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
-    color: #129990;
-    text-shadow: 7px 5px 5px#05413f;
-
+    color: var(--cor-terciaria);
+    text-shadow: 7px 5px 5px var(--cor-primaria);
 }
 h2{
-    margin-top: 20px;
-    color: #90D1CA;
+    margin-top: 3rem;
+    color: #0d6963;
     text-align: center;
     font-size: 1.75rem;
     font-family:  "Spicy Rice", 'Times New Roman', Times, serif;
-    text-shadow: 5px 5px 5px#0d6963;
-
+    text-shadow: 5px 5px 5px#26c6bb;
+    padding: 1rem 11rem;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
 }
-.Pergunta{
-    margin: 2rem 0;
+.quiz{
+    display: flex;
+    flex-direction: column;
+    background-color: #05413f;
+    padding: 5rem 7rem;
+    border-radius:  0 0 20px 20px;
+}
+.main-botoes{
+    margin-top: 3rem;
+    display:flex;
+    justify-content: space-around;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:  all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background:#222;
+    color:#fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#enviar{
+    background: #37bcb7;
+    color:#fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#next-btn{
+    background: #37b8b4;
+    color:#fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #90e3e0;
+}
+.incorrect{
+    background: #822222;
+}
+/* .botoes_enviar{
+    background-color: #0d6963;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+} */
+/* button:hover{
+    background-color: #1a312f;
+} */
+#question{
     margin-left: 15px;
     font-size: 1.5rem;
     font-family:  sans-serif;
@@ -60,6 +143,14 @@ p{
     text-align: left;
     color: #1c8a96;
 }
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .botao_link{
     background-color: rgb(0, 176, 0);
