@@ -4,75 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dificil.css">
     <title>CGtec - Sequência </title>
 </head>
 
 <body>
-    <header>
+    <header><br>
+        <center>
         <h1>Sequência numérica</h1>
+        </center>
     </header>
     <main>
-        <h2> Questôes de Nível Difícil: </h2><br><br>
-        <p class="Pergunta">1. Complete a sequência numérica: <br> …, 4, 6, 9, …, 18, 24, …, 39, …, 58 </p><br>
+        <h2 class="pergunta"> Questões de Nível Difícil: </h2><br>
+        <p class="pergunta" id="question">Complete a sequência numérica: <br> … , 4, 6, 9, … , 18, 24, … , 39, … , 58 </p>
+        <div id="answer-buttons">
         <p>
-            <input type="radio"> 3, …, …, …, 13, …, …, 31, …, 48, …
+            <tr><td><button class="btn"> 3, …, …, …, 13, …, …, 31, …, 48, …</button></td></tr>
         <p>
-            <input type="radio"> 1, …, …, …, 10, …, …, 25, …, 57, …
+            <tr><td><button class="btn"> 1, …, …, …, 10, …, …, 25, …, 57, …</button></td></tr>
         <p>
-            <input type="radio"> 2, …, …, …, 12, …, …, 35, …, 50, …
+            <tr><td><button class="btn"> 2, …, …, …, 12, …, …, 35, …, 50, …</button></td></tr>
         <p>
-            <input type="radio"> 2, …, …, …, 14, …, …, 28, …, 50, …
+            <tr><td><button class="btn"> 2, …, …, …, 14, …, …, 28, …, 50, …</button></td></tr>
         <p>
+        </div>
+        <button type="submit" id="next-btn">Próximo</button>
             <br><br>
 
-        <p class="Pergunta">2. Complete a sequência: <br> 5, 11, …, 29, 41, … </p><br>
-        <p>
-            <input type="radio"> …, …, 17, …, …, 47
-        <p>
-            <input type="radio"> …, …, 15, …, …, 45
-        <p>
-            <input type="radio"> …, …, 19, …, …, 55
-        <p>
-            <input type="radio"> …, …, 20, …, …, 45
-        <p>
-            <br><br>
-             <p class="Pergunta">3. Seguindo o padrão da sequência numérica, qual o próximo número correspondente na sequência abaixo: <br> 1, 2, 6, 16, 44, 120, … </p><br>
-        <p>
-            <input type="radio"> 420
-        <p>
-            <input type="radio"> 328
-        <p>
-            <input type="radio"> 166
-        <p>
-            <input type="radio"> 240
-        <p>
-            <br><br>
-             <p class="Pergunta">4. Seguindo o padrão da sequência numérica, qual o número que falta na sequência abaixo: <br> 4, 16, _, 65536 </p><br>
-        <p>
-            <input type="radio"> 256
-        <p>
-            <input type="radio"> 1600
-        <p>
-            <input type="radio"> 365
-        <p>
-            <input type="radio"> 636
-        <p>
-            <br><br>
+    <nav>
+            <a id="botao_menu" href="Index.html"><span>Menu</span></a>
+            <a id="botao_facil" href="facil.html"><span>Fácil</span></a>
+            <a id="botao_medio" href="medio.html"><span>Médio</span></a>
+            <a id="botao_impossivel" href="impossivel.html"><span>Impossível</span></a>
+    </nav>
 
-
-
-        <nav>
-            <a class="botao_link" href="Index.html"><span>Menu</span></a>
-            <a class="botao_link" href="medio.html"><span>Médio</span></a>
-            <a class="botao_link" href="dificil.html"><span>Difícil</span></a>
-            <a class="botao_link" href="impossivel.html"><span>Impossível</span></a>
-        </nav>
     </main>
+
     <footer>
         <small> &copy; Todos os direitos reservados aos alunos: Gustavo Godoy, Manuela Mari, Mariana Cariati, Pedro
             Castro e Sophia Bortoloto.</small>
     </footer>
+    <script src="js/dificil.js"></script>
 </body>
 
 </html>
