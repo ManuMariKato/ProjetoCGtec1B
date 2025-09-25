@@ -110,11 +110,15 @@ table td:first-child {
     color: white
 }
 
-footer {
+footer{
     text-align: center;
     padding: 20px;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 10px;
+}
+
+small{
+    font-size: 0.7rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -129,11 +133,19 @@ footer {
     }
 }
 
+#answer-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
 .btn{
     background: #fff;
     color: #222;
     font-weight: 500;
-    width: 100%;
+    width: 99.5%;
     border: none;
     padding: 10px;
     margin: 10px 0;
@@ -141,6 +153,9 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition:  all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 .btn:hover:not([disabled]){
     background:#3b3b3b;
@@ -165,11 +180,11 @@ footer {
 }
 
 .correct{
-    background: #00a116;
+    background: #00c21a;
 }
 
 .incorrect{
-    background: #660000;
+    background: #d80000;
 }
 
 #question{
