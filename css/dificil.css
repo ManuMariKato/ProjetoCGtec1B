@@ -52,11 +52,15 @@ body {
 }
 
 nav {
-    margin: 1rem;
-    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-left: 6.8rem;
 }
 
 nav a {
