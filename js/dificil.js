@@ -43,6 +43,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const impossibleButton = document.getElementById("botao_impossivel");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -74,6 +75,7 @@ function showQuestion() {
 
 function resetState() {
   nextButton.style.display = "none";
+  impossibleButton.style.display = "none";
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
@@ -102,8 +104,8 @@ function selectAnswer(e) {
 function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
-  nextButton.innerHTML = "Play Again";
-  nextButton.style.display = "block";
+  impossibleButton.style.display = "block";
+  impossibleButton.link("dificil.html")
 }
 
 function handleNextButton() {
