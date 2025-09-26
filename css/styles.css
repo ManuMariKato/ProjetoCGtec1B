@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,12 +11,24 @@
     --secunda-azul: #FFE100;
     --terceiro-azul: #FF9B00;
     --quarto-azul: #DC143C;
+    --font-principal: "Sansation", sans-serif;;
 }
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background:linear-gradient(-97.54deg, #FEBBCC, #f98da8);
+}
+.main-textos{
+    background-color: #ab254661;
+    margin: 3rem 12rem;
+    border-radius: 50px;
+    box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
+    
+    padding-bottom: 2rem;
+}
+.main-textos:hover{
+    box-shadow: 0 0 12px rgba(255, 0, 111, 0.875);
 }
 nav{
     margin: 1rem;
@@ -43,31 +55,59 @@ h1{
     margin: 2rem 12rem;
     font-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
-    
     color:#FFEECC;
 }
 .texto_main {
     margin: 0 12rem;
     font-size: 1.5rem;
     color: white;
+    font-family: "Montserrat", sans-serif;
 }
 #texto_main2{
-    color: white;
+    color: #FFEECC;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 2rem;
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    font-family: var(--font-principal);
+}
+.main-botoes{
+    background-color: #ab254661;
+    margin: 3rem 12rem;
+    border-radius: 50px;
+    box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
+}
+.main-botoes:hover{
+    box-shadow: 0 0 12px rgb(255, 0, 111);
 }
 #botao_facil{
     background-color: var(--primeiro-azul);
 }
+#botao_facil:hover{
+    background-color:#30d6cb ;
+    color:#0c6a64;
+}
 #botao_medio{
     background-color: var(--secunda-azul);
+}
+#botao_medio:hover{
+    background-color: #fff6af;
+    color: #FFE100;
 }
 #botao_dificil{
     background-color: var(--terceiro-azul);
 }
+#botao_dificil:hover{
+    background-color: #fec46d;
+    color: #FF9B00;
+}
 #botao_impossivel{
     background-color: var(--quarto-azul);
+}
+#botao_impossivel:hover{
+    background-color: #ff6b89;
+    color: #DC143C;
 }
 footer{
     padding: 30px;
@@ -76,5 +116,5 @@ footer{
 }
 small{
     color:#f98da8;
-    
+    font-size: 0.7rem;
 }
