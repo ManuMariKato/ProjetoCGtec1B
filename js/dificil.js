@@ -45,13 +45,20 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const impossibleButton = document.getElementById("botao_impossivel");
 
+
 let currentQuestionIndex = 0;
 let score = 0;
+
+document.getElementById("botao_menu").addEventListener = ("click", clickInicio);
+
+function clickInicio(){
+  let confirmar = confirm("Deseja realmente sair?");
+}
 
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-  nextButton.innerHTML = "Próxima";
+  nextButton.innerHTML = "Próximo";
   showQuestion();
 }
 
@@ -105,7 +112,7 @@ function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
   impossibleButton.style.display = "block";
-  impossibleButton.link("dificil.html")
+  impossibleButton.link("impossivel.html")
 }
 
 function handleNextButton() {
@@ -124,5 +131,7 @@ nextButton.addEventListener("click", () => {
     startQuiz();
   }
 });
+
+
 
 startQuiz();
