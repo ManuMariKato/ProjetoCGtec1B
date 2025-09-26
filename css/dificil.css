@@ -29,6 +29,11 @@
     background-color: var(--quarto-azul);
 }
 
+#botao_impossivel:hover{
+    background-color: #ff6b89;
+    color: #DC143C;
+}
+
 #botao_menu{
     background-color: var(--cor-menu);
 }
@@ -197,4 +202,5 @@ small{
     font-family:  sans-serif;
     text-align: left;
     color: #ffffff;
+
 }
