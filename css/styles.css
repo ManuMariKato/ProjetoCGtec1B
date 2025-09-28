@@ -50,6 +50,8 @@ h1{
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
     color: #f98da8;
     background-color: #FFEECC;
+    padding: 1rem;
+    text-shadow: #d82854 3px 3px 3px;
 }
 .subtitulo{
     margin: 2rem 12rem;
@@ -116,5 +118,5 @@ footer{
 }
 small{
     color:#f98da8;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
