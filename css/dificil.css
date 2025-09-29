@@ -28,7 +28,6 @@
 #botao_impossivel{
     background-color: var(--quarto-azul);
 }
-
 #botao_impossivel:hover{
     background-color: #ff6b89;
     color: #DC143C;
@@ -36,6 +35,9 @@
 
 #botao_menu{
     background-color: var(--cor-menu);
+}
+#botao_menu:hover{
+    background-color:#d80000 ;
 }
 
 h1{
@@ -46,7 +48,7 @@ h1{
 
 body {
     background-color: #ffaf53;
-    background-image: url('file:///D:/Arquivos%20do%20jv/PW1/img/grookey.jpg');
+    background-image: url("../img/professorLaranja.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -56,16 +58,16 @@ body {
     color: #1a1a1a;
 }
 
+
 nav {
     max-width: 900px;
-    margin: 40px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
     box-shadow: 0 0 12px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    margin-left: 6.8rem;
+    margin: 1.5rem 12rem;
 }
 
 nav a {
@@ -120,14 +122,17 @@ table td:first-child {
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
-    color: #ffffff;
+    color: #ffa836;
     font-size: 10px;
+    background: linear-gradient(to right,#ffe8cf,#f7c994);
 }
 
 small{
     font-size: 0.7rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -176,17 +181,18 @@ small{
 }
 
 #next-btn{
-    background: #37b8a3;
+    background: #ffa836;
     color:#fff;
     font-weight: 500;
     width: 150px;
     border: 0;
     padding: 10px;
     margin: 20px auto 0;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
     display: none;
 }
+
 
 .correct{
     background: #00c21a;
@@ -202,5 +208,4 @@ small{
     font-family:  sans-serif;
     text-align: left;
     color: #ffffff;
-
 }
