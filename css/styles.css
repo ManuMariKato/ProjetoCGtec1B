@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,20 +12,28 @@
     --secunda-azul: #FFE100;
     --terceiro-azul: #FF9B00;
     --quarto-azul: #DC143C;
-    --font-principal: "Sansation", sans-serif;;
+    --font-principal: "Sansation", sans-serif;
+    --fonte-botao: 'Poppins', sans-serif;
 }
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background:linear-gradient(-97.54deg, #FEBBCC, #f98da8);
+    background-image: url(../img/florzinha-fundo.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -100px 80%;
+    background-color: #f98da8;
+}
+main{
+    margin-bottom: auto;
+    
 }
 .main-textos{
     background-color: #ab254661;
-    margin: 3rem 12rem;
+    margin: 3rem 20rem;
     border-radius: 50px;
     box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
-    
     padding-bottom: 2rem;
 }
 .main-textos:hover{
@@ -43,6 +52,7 @@ nav a {
     margin: 40px 15px;
     border-radius: 10px;
     color: white;
+    font-family: var(--fonte-botao);
 }
 h1{
     text-align: center;
@@ -76,7 +86,7 @@ h1{
 }
 .main-botoes{
     background-color: #ab254661;
-    margin: 3rem 12rem;
+    margin: 3rem 20rem;
     border-radius: 50px;
     box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
 }
