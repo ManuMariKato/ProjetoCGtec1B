@@ -2,20 +2,20 @@ const questions = [
     {
         question: " Qual é o próximo termo da sequência numérica: <br>  0, 1, 3, 7, 15, …",
         answers: [
-            {id: 1, text: "31", correct:true},
-            {id: 2, text: "19", correct:false},
-            {id: 3, text: "21", correct:false},
-            {id: 4, text: "27", correct:false}
+            {id: 1, text: "A) 31", correct:true},
+            {id: 2, text: "B) 19", correct:false},
+            {id: 3, text: "C) 21", correct:false},
+            {id: 4, text: "D) 27", correct:false}
         ]
 
     },
     {
         question: " Mantendo-se a regularidade da sequência numérica -3, 1, -5, 3, -7, 5, …, os dois próximos elementos dessa sequência serão, respectivamente:",
         answers: [
-            {id: 1, text: "-10 e 6", correct:false},
-            {id: 2, text: "-9 e 7", correct:true},
-            {id: 3, text: "-11 e 5", correct:false},
-            {id: 4, text: "-12 e 4", correct:false}
+            {id: 1, text: "A) -10 e 6", correct:false},
+            {id: 2, text: "B) -9 e 7", correct:true},
+            {id: 3, text: "C) -11 e 5", correct:false},
+            {id: 4, text: "D) -12 e 4", correct:false}
         ]
 
     }

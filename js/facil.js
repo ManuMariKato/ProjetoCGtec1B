@@ -2,50 +2,50 @@ const questions = [
     {
         question: "Complete a sequência numérica: <br> 2, …, …, 8, …, …, 14, …",
         answers: [
-            {id: 1, text: "4, 6, …, 10, 12, …, 16 ", correct:true},
-            {id: 2, text: "6, 7, …, 12, 13, …, 17", correct:false},
-            {id: 3, text: "5, 7, …, 9, 10, …, 15", correct:false},
-            {id: 4, text: "4, 5, …, 12, 15, …, 18", correct:false}
+            {id: 1, text: "A) 4, 6, …, 10, 12, …, 16 ", correct:true},
+            {id: 2, text: "B) 6, 7, …, 12, 13, …, 17", correct:false},
+            {id: 3, text: "C) 5, 7, …, 9, 10, …, 15", correct:false},
+            {id: 4, text: "D) 4, 5, …, 12, 15, …, 18", correct:false}
         ]
 
     },
     {
         question: "Complete a sequência: <br> 0, …, 8, …, 16, …, …, 28",
         answers: [
-            {id: 1, text: "4, …, 10, …, 20, 26, …", correct:false},
-            {id: 2, text: "5, …, 9, …,  17, 21, …", correct:false},
-            {id: 3, text: "4, …, 12, …, 20, 24, …", correct:true},
-            {id: 4, text: "6, …, 12, …, 18, 24, …", correct:false}
+            {id: 1, text: "A) 4, …, 10, …, 20, 26, …", correct:false},
+            {id: 2, text: "B) 5, …, 9, …,  17, 21, …", correct:false},
+            {id: 3, text: "C) 4, …, 12, …, 20, 24, …", correct:true},
+            {id: 4, text: "D) 6, …, 12, …, 18, 24, …", correct:false}
         ]
 
     },
     {
-        question: "Seguindo o padrão da sequência numérica, qual o próximo número correspondente na sequência abaixo: <br> (37, 31, 29, 23, 19, 17, …)",
+        question: "Seguindo o padrão da sequência numérica, qual o próximo número correspondente na sequência abaixo: <br> (37, 31, 29, 23, 20, 14, …)",
         answers: [
-            {id: 1, text: "15", correct:false},
-            {id: 2, text: "16", correct:false},
-            {id: 3, text: "11", correct:true},
-            {id: 4, text: "13", correct:false}
+            {id: 1, text: "A) 15", correct:false},
+            {id: 2, text: "B) 16", correct:false},
+            {id: 3, text: "C) 11", correct:true},
+            {id: 4, text: "D) 13", correct:false}
         ]
 
     },
     {
         question: "Complete a Sequencia a seguir<br> 4, 5, 11, 19, 29, 41, _ ",
         answers: [
-            {id: 1, text: "48", correct:false},
-            {id: 2, text: "51", correct:false},
-            {id: 3, text: "55", correct:true},
-            {id: 4, text: "59", correct:false}
+            {id: 1, text: "A) 48", correct:false},
+            {id: 2, text: "B) 51", correct:false},
+            {id: 3, text: "C) 55", correct:true},
+            {id: 4, text: "D) 59", correct:false}
         ]
 
     },
     {
         question: "Qual é o próximo termo da sequência numérica: <br> 1, 4, 9, 16, ? ",
         answers: [
-            {id: 1, text: "21", correct:false},
-            {id: 2, text: "49", correct:true},
-            {id: 3, text: "35", correct:false},
-            {id: 4, text: "25", correct:false}
+            {id: 1, text: "A) 21", correct:false},
+            {id: 2, text: "B) 49", correct:false},
+            {id: 3, text: "C) 35", correct:false},
+            {id: 4, text: "D) 25", correct:true}
         ]
 
     },
