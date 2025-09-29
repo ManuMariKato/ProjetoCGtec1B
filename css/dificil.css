@@ -3,6 +3,7 @@
 
 *{
     font-size: x-large;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 :root{
@@ -15,32 +16,33 @@
 
 #botao_facil{
     background-color: var(--primeiro-azul);
+    border-radius: 20px;
 }
 
 #botao_medio{
     background-color: var(--secunda-azul);
+    border-radius: 20px;
 }
 
 #botao_dificil{
     background-color: var(--terceiro-azul);
+    border-radius: 20px;
 }
 
 #botao_impossivel{
     background-color: var(--quarto-azul);
     border-radius: 20px;
 }
+
 #botao_impossivel:hover{
     background-color: #ff6b89;
     color: #DC143C;
+    border-radius: 20px;
 }
 
 #botao_menu{
     background-color: var(--cor-menu);
     border-radius: 20px;
-}
-#botao_menu:hover{
-    background-color:#ffa1b8;
-    color: #b83d56;
 }
 
 h1{
@@ -51,7 +53,6 @@ h1{
 
 body {
     background-color: #ffaf53;
-    background-image: url("../img/professorLaranja.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -59,18 +60,23 @@ body {
     margin: 0;
     padding: 0;
     color: #1a1a1a;
+    background-image: url(../img/princesamaisgrana-fundo.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 0px 60%;
+    
 }
-
 
 nav {
     max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
     box-shadow: 0 0 12px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    margin: 1.5rem 12rem;
+    margin-left: 25.3%;
 }
 
 nav a {
@@ -131,11 +137,12 @@ footer{
     color: #ffa836;
     font-size: 10px;
     background: linear-gradient(to right,#ffe8cf,#f7c994);
+    padding: -100px;
 }
 
 small{
     font-size: 0.7rem;
-    margin-bottom: 1rem;
+    text-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -184,18 +191,17 @@ small{
 }
 
 #next-btn{
-    background: #ffa836;
+    background: #37b8a3;
     color:#fff;
     font-weight: 500;
     width: 150px;
     border: 0;
     padding: 10px;
     margin: 20px auto 0;
-    border-radius: 50px;
+    border-radius: 20px;
     cursor: pointer;
     display: none;
 }
-
 
 .correct{
     background: #00c21a;
@@ -211,4 +217,5 @@ small{
     font-family:  sans-serif;
     text-align: left;
     color: #ffffff;
+
 }

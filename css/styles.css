@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -36,9 +38,11 @@ main{
     box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
     padding-bottom: 2rem;
 }
+
 .main-textos:hover{
     box-shadow: 0 0 12px rgba(255, 0, 111, 0.875);
 }
+
 nav{
     margin: 1rem;
     position: relative;
@@ -54,6 +58,7 @@ nav a {
     color: white;
     font-family: var(--fonte-botao);
 }
+
 h1{
     text-align: center;
     font-size: 3.5rem;
@@ -63,18 +68,21 @@ h1{
     padding: 1rem;
     text-shadow: #d82854 3px 3px 3px;
 }
+
 .subtitulo{
     margin: 2rem 12rem;
     font-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
     color:#FFEECC;
 }
+
 .texto_main {
     margin: 0 12rem;
     font-size: 1.5rem;
     color: white;
     font-family: "Montserrat", sans-serif;
 }
+
 #texto_main2{
     color: #FFEECC;
     text-align: center;
@@ -84,48 +92,68 @@ h1{
     font-size: 1.5rem;
     font-family: var(--font-principal);
 }
+
 .main-botoes{
     background-color: #ab254661;
     margin: 3rem 20rem;
     border-radius: 50px;
     box-shadow: 0 0 12px rgb(255, 244, 128, 0.5);
 }
+
 .main-botoes:hover{
     box-shadow: 0 0 12px rgb(255, 0, 111);
 }
+
 #botao_facil{
     background-color: var(--primeiro-azul);
+    border-radius: 20px;
 }
+
 #botao_facil:hover{
     background-color:#30d6cb ;
     color:#0c6a64;
+    border-radius: 20px;
 }
+
 #botao_medio{
     background-color: var(--secunda-azul);
+    border-radius: 20px;
 }
+
 #botao_medio:hover{
     background-color: #fff6af;
     color: #FFE100;
+    border-radius: 20px;
 }
+
 #botao_dificil{
     background-color: var(--terceiro-azul);
+    border-radius: 20px;
 }
+
 #botao_dificil:hover{
     background-color: #fec46d;
     color: #FF9B00;
+    border-radius: 20px;
 }
+
 #botao_impossivel{
     background-color: var(--quarto-azul);
+    border-radius: 20px;
 }
+
 #botao_impossivel:hover{
     background-color: #ff6b89;
     color: #DC143C;
+    border-radius: 20px;
 }
+
 footer{
     padding: 30px;
     background-color: #FFEECC;
     text-align: center;
 }
+ 
 small{
     color:#f98da8;
     font-size: 1rem;
