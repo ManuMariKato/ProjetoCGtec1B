@@ -27,6 +27,7 @@
 
 #botao_impossivel{
     background-color: var(--quarto-azul);
+    border-radius: 20px;
 }
 #botao_impossivel:hover{
     background-color: #ff6b89;
@@ -35,9 +36,11 @@
 
 #botao_menu{
     background-color: var(--cor-menu);
+    border-radius: 20px;
 }
 #botao_menu:hover{
-    background-color:#d80000 ;
+    background-color:#ffa1b8;
+    color: #b83d56;
 }
 
 h1{
@@ -172,8 +175,8 @@ small{
     justify-content: left;
 }
 .btn:hover:not([disabled]){
-    background:#3b3b3b;
-    color:#fff;
+    background:#ffdaaa;
+    color:#ff9100;
 }
 
 .btn:disabled{
