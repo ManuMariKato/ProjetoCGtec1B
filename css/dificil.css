@@ -45,10 +45,17 @@
     border-radius: 20px;
 }
 
+#botao_menu:hover{
+    background-color: #ffcdda;
+    color:#f98da8;
+    border-radius: 20px;
+}
+
 h1{
     font-size: 60px;
     color: white;
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px rgb(159, 94, 20);
 }
 
 body {
@@ -205,10 +212,12 @@ small{
 
 .correct{
     background: #00c21a;
+    color:#00ff22;
 }
 
 .incorrect{
     background: #d80000;
+    color:#ff8888;
 }
 
 #question{
