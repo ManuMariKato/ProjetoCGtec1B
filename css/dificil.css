@@ -80,10 +80,14 @@ nav {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px #b05800;
     display: flex;
     justify-content: center;
     margin-left: 25.3%;
+}
+
+nav:hover{
+    box-shadow: 0 0 12px #d87300;
 }
 
 nav a {
@@ -100,7 +104,11 @@ main {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px #b05800;
+}
+
+main:hover{
+    box-shadow: 0 0 12px #d87300;
 }
 
 h2 {
