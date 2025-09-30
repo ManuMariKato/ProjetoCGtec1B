@@ -26,6 +26,7 @@ body{
     background-size: 500px;
     background-position: -100px 80%;
     background-color: #f98da8;
+    
 }
 main{
     margin-bottom: auto;
@@ -149,12 +150,11 @@ h1{
 }
 
 footer{
-    padding: 30px;
     background-color: #FFEECC;
     text-align: center;
 }
  
 small{
     color:#f98da8;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
