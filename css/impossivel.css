@@ -48,10 +48,11 @@ h1{
     font-size: 60px;
     color: white;
     font-family: "Spicy Rice", 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px #8C3B42;
 }
 
 body {
-    background-color: #FFE99A;
+    background-color: #C82617;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -59,10 +60,10 @@ body {
     margin: 0;
     padding: 0;
     color: #1a1a1a;
-    background-image: url(../img/lindinha.png);
+    background-image: url(../img/ele-diabinho.png);
     background-repeat: no-repeat;
-    background-size: 700px;
-    background-position: -140px 60%;
+    background-size: 250px;
+    background-position: 10px 90%;
 }
 
 nav {
@@ -76,9 +77,6 @@ nav {
     justify-content: center;
     margin-left: 25.3%;
 }
-/* #input{
-    background-color: #00c21a;
-} */
 
 nav a {
     text-decoration: none;
@@ -121,8 +119,8 @@ table td:first-child {
     font-weight: bold;
 }
 
-.pergunta {
-    background-color: #FFE99A;
+.cabeça {
+    background-color: #C82617;
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
@@ -130,6 +128,17 @@ table td:first-child {
     margin-bottom: 10px;
     color: white
 }
+
+button{
+    background-color: #C82617;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(255, 214, 214);
+}
+
 
 footer{
     display: flex;
@@ -165,10 +174,15 @@ small{
     align-items: center;
     margin-left: 15px;
 }
-.input{
-    padding: 15px 290px;
-    border-radius: 20px;
+#resposta{
+    padding: 60px 20%;
+    border-radius: 50px;
+    all: unset;
+    border: 2px solid transparent;
+    box-shadow: 0px 2px 2px 2px #640109;
+    transition: border 0.3s ease-in-out;
 }
+
 .input:hover{
     border: #ec4365;
 }
