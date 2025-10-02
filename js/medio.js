@@ -18,26 +18,37 @@ const questions = [
             {id: 4, text: "D) -12 e 4", correct:false}
         ]
 
-    }
-    // {
-    //     question: "3. Determine a soma dos próximos termos da sequência com ordem lógica: <br> 0, 2, 6, 2, 4, 12, 4, 6, 18, 6, …",
-    //     //QUESTÃO DISSERTATIVA!!!!!!!!
-    // },
-    // {
-    //     question: "4. Complete a Sequencia a seguir <br> 1, 2, 6, 16, 44, 120, _  ",
-    //     //OUTRA DISSERTATIVA !!!!
-
-    // },
-    // {
-    //     question: "5. Qual é o Próximo número? <br> 3, 13, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, _ ",
-    //     // OUTRA OUTRA DISSERTATIVA!!!!!!!!
-
-    // },
+    },
+    {
+      question: "Qual é o próximo termo da sequência númerica: <br> 2, 6, 12, 20, 30, ...",
+      answers: [
+        {id: 1, text: "A) 40", correct:false},
+        {id: 2, text: "B) 62", correct:false},
+        {id: 3, text: "C) 50", correct:false},
+        {id: 4, text: "D) 42", correct:true}
+      ]
+    },
+    {
+      question: "Qual é o próximo termo da sequência númerica: <br> 50, 45, 41, 38, 36, 35, ...",
+      answers: [
+        {id: 1, text: "A) 34", correct:false},
+        {id: 2, text: "B) 32", correct:false},
+        {id: 3, text: "C) 31", correct:false},
+        {id: 4, text: "D) 35", correct:true}
+      ]
+    },
+    {
+      question: "Sequência: 1, ..., ..., ..., ... <br> cada termo é o número de divisores do termo anterior. Qual o 15º ?",
+      answers: "1"
+    },
+    
 ]
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const dificilButton = document.getElementById("botao_dificil");
+const bostaResposta = document.getElementById("resposta");
+const enviarResposta = document.getElementById("enviarResposta");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -46,6 +57,8 @@ function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Próxima";
+  bostaResposta.classList.add("desabilidado");
+  enviarResposta.classList.add("desabilidado");
   showQuestion();
 }
 
@@ -55,7 +68,12 @@ function showQuestion() {
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-  currentQuestion.answers.forEach((answer) => {
+  if(currentQuestionIndex == 4){
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    
+
+  } else{
+    currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
     button.classList.add("btn");
@@ -65,11 +83,14 @@ function showQuestion() {
 
     button.addEventListener("click", selectAnswer);
   });
+  }
+  
 }
 
 function resetState() {
   nextButton.style.display = "none";
   dificilButton.style.display = "none";
+  
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
@@ -98,18 +119,56 @@ function selectAnswer(e) {
 function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+  bostaResposta.classList.add("desabilidado");
+  enviarResposta.classList.add("desabilidado");
+  feedback.remove();
   dificilButton.style.display = "block";
   dificilButton.link("dificil.html");
+  
+
 }
 
 function handleNextButton() {
   currentQuestionIndex++;
+
+  if(currentQuestionIndex == 4){
+
+    showQuestion();
+    bostaResposta.classList.remove("desabilidado");
+    enviarResposta.classList.remove("desabilidado");
+    verificarResposta();
+  }
+
   if (currentQuestionIndex < questions.length) {
     showQuestion();
-  } else {
+  } 
+  else {
     showScore();
   }
 }
+
+ function verificarResposta() {
+      const respostaUsuario = document.getElementById("resposta").value.trim();
+      const respostaCorreta = questions[currentQuestionIndex].answers;
+      const feedback = document.getElementById("feedback");
+
+      if (respostaUsuario === "") {
+        feedback.textContent = "⚠️ Digite uma resposta!";
+        feedback.className = "feedback incorreto";
+        return;
+      }
+
+      if (respostaUsuario === respostaCorreta) {
+        feedback.textContent = "✅ Correto!";
+        feedback.className = "feedback correto";
+        score++
+        nextButton.style.display = "block";
+      } else {
+        feedback.textContent = "❌ Incorreto! A resposta correta é: " + respostaCorreta;
+        feedback.className = "feedback incorreto";
+        nextButton.style.display = "block";
+      }
+    }
 
 nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
