@@ -234,3 +234,8 @@ small{
     color: #ffffff;
 
 }
+
+.desabilidado{
+    display: none;
+}
+
