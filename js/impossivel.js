@@ -1,7 +1,9 @@
 const questoes = [
       { pergunta: "Seguindo o padrão da sequência numérica, qual o número final na sequência abaixo: 2, 10, 12, 16, 17, 18, 19, … ", resposta: "200" },
       { pergunta: "Seguindo o padrão da sequência numérica, qual o número final na sequência abaixo:  3, 6, 36, 12, 15, 90, … ", resposta: "30" },
-      { pergunta: "Seguindo o padrão da sequência numérica, qual o número final na sequência abaixo: 2, 10, 12, 16, 17, 18, 19, … ", resposta: "200" }
+      { pergunta: "Seguindo o padrão da sequência numérica, qual o número final na sequência abaixo: 2, 10, 12, 16, 17, 18, 19, … ", resposta: "200" },
+      { pergunta: "Sequência: 2, 12, 1112, 3112, 132112, ...", resposta: "1113122112" },
+      { pergunta: "Qual é o próximo número da sequência? <br> 2, 6, 30, 210, 2310, ...", resposta: "30030" }
     ];
 
     let indice = 0;

@@ -30,7 +30,7 @@ const questions = [
 
     },
     {
-        question: "Complete a Sequencia a seguir<br> 4, 5, 11, 19, 29, 41, _ ",
+        question: "Complete a Sequencia a seguir:<br> 5, 11, 19, 29, 41, _ ",
         answers: [
             {id: 1, text: "A) 48", correct:false},
             {id: 2, text: "B) 51", correct:false},
@@ -45,10 +45,31 @@ const questions = [
             {id: 1, text: "A) 21", correct:false},
             {id: 2, text: "B) 49", correct:false},
             {id: 3, text: "C) 35", correct:false},
-            {id: 4, text: "D) 25", correct:true}
+            {id: 4, text: "D) 27", correct:true}
         ]
 
     },
+    {
+        question: "Qual é o próximo termo da sequência numérica: <br> 3, 6, 12, 24, 48, ... ",
+        answers: [
+            {id: 1, text: "A) 49", correct:false},
+            {id: 2, text: "B) 96", correct:true},
+            {id: 3, text: "C) 58", correct:false},
+            {id: 4, text: "D) 60", correct:false}
+        ]
+
+    },
+    {
+        question: "Qual é o próximo termo da sequência numérica: <br> 81, 27, 9, 3, 1, ... ",
+        answers: [
+            {id: 1, text: "A) 1/3", correct:true},
+            {id: 2, text: "B) 1/2", correct:false},
+            {id: 3, text: "C) 3", correct:false},
+            {id: 4, text: "D) 3/1", correct:false}
+        ]
+
+    },
+    
 ]
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
