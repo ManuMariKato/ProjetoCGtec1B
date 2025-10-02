@@ -40,54 +40,9 @@ const questions = [
 
     },
     {
-          question: "A sequência é formada pelos números primos em ordem crescente, mas excluindo qualquer número primo que contenha o dígito 7. Qual é o 25º termo dessa sequência.<br>",
-        answers: [
-            {id: 1, text: "A) 163", correct:true},
-            {id: 2, text: "B) 151", correct:false},
-            {id: 3, text: "C) 101", correct:false},
-            {id: 4, text: "D) 197", correct:false}
-        ]
-      },
-      {
-          question: "Considere a sequência dos números primos gêmeos (pares de primos que diferem de 2, ex: {3,5}). Pegando apenas o primeiro número de cada par, qual é o 20º termo?<br>",
-        answers: [
-            {id: 1, text: "A) 281", correct:true},
-            {id: 2, text: "B) 327", correct:false},
-            {id: 3, text: "C) 269", correct:false},
-            {id: 4, text: "D) 311", correct:false}
-        ]
-      },
-          {
-          question: "O 4º termo d euma sequência aritmética é 40 e o 7º é 82. Qual é o 1º termo?<br>",
-        answers: [
-            {id: 1, text: "A) 42", correct:false},
-            {id: 2, text: "B) 2", correct:false},
-            {id: 3, text: "C) 14", correct:false},
-            {id: 4, text: "D) -2", correct:true}
-        ]
-      },
-      {
-          question: "Considere a sequência aritmética: <br> (7, 13, 19, 25, ...). Qual é o 10º termo?",
-        answers: [
-            {id: 1, text: "A) 54", correct:false},
-            {id: 2, text: "B) 61", correct:true},
-            {id: 3, text: "C) 31", correct:false},
-            {id: 4, text: "D) 167", correct:false}
-        ]
-      },
-      {
-          question: "A soma dos 5 primeiros termos da sequência: <br> 1, 4, 9, 16, 25, ...(quadrados perfeitos) é?",
-        answers: "55"
-      },
-      {
-         question: "Uma sequência é: 2, 4, 8, 16, ... , 256. Qual é a soma de todos os termos que são múltiplos de 16? ",
-        answers: [
-            {id: 1, text: "A) 240", correct:false},
-            {id: 2, text: "B) 272", correct:false},
-            {id: 3, text: "C) 496", correct:true},
-            {id: 4, text: "D) 480", correct:false}
-        ]
-      },
+        question: "Dada a sequência 3, 6, 10, 15, 21, 28, 36,…, qual é o próximo número da sequência",
+        answers: "45"
+    }
 
 ]
 const questionElement = document.getElementById("question");
@@ -162,16 +117,43 @@ function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
   impossibleButton.style.display = "block";
-  impossibleButton.link("impossivel.html")
+  impossibleButton.link("impossivel.html");
 }
 
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
-  } else {
+  } 
+  else if(currentQuestionIndex == 4){
+    answerButtons.display.style = "none";
+    verificarResposta();
+  }
+  else {
     showScore();
   }
+}
+
+function verificarResposta() {
+      const respostaUsuario = document.getElementById("resposta").value.trim();
+      const respostaCorreta = questions[4].answers;
+      const feedback = document.getElementById("feedback");
+
+      if (respostaUsuario === "") {
+        feedback.textContent = "⚠️ Digite uma resposta!";
+        feedback.className = "feedback incorreto";
+        return;
+      }
+
+      if (respostaUsuario === respostaCorreta) {
+        feedback.textContent = "✅ Correto!";
+        feedback.className = "feedback correto";
+        score++
+      } else {
+        feedback.textContent = "❌ Incorreto! A resposta correta é: " + respostaCorreta;
+        feedback.className = "feedback incorreto";
+      }
+    nextButton.style.display = "block";
 }
 
 nextButton.addEventListener("click", () => {
@@ -181,7 +163,5 @@ nextButton.addEventListener("click", () => {
     startQuiz();
   }
 });
-
-
 
 startQuiz();
