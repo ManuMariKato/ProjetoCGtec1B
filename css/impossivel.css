@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Titan+One&display=swap');
 
 *{
     font-size: x-large;
@@ -11,6 +13,12 @@
     --secunda-azul: #FFE100;
     --terceiro-azul: #FF9B00;
     --quarto-azul: #DC143C;
+    --quinto-azul: #4e0f1c;
+}
+
+#botao_nj{
+    background-color: var(--quinto-azul);
+    border-radius: 20px;
 }
 
 #botao_facil{
@@ -44,11 +52,17 @@
     border-radius: 20px;
 }
 
+#botao_menu:hover{
+    background-color: #ffcdda;
+    color:#f98da8;
+    border-radius: 20px;
+}
+
 h1{
     font-size: 60px;
     color: white;
-    font-family: "Spicy Rice", 'Times New Roman', Times, serif;
-    text-shadow: 5px 5px 5px #8C3B42;
+    font-family: "Poetsen One", 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px #29191a;
 }
 
 body {
@@ -62,8 +76,8 @@ body {
     color: #1a1a1a;
     background-image: url(../img/ele-diabinho.png);
     background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: 10px 90%;
+    background-size: 350px;
+    background-position: 95% 65%;
 }
 
 nav {
@@ -76,6 +90,10 @@ nav {
     display: flex;
     justify-content: center;
     margin-left: 25.3%;
+}
+
+nav:hover{
+    box-shadow: 0 0 12px #C82617;
 }
 
 nav a {
@@ -94,6 +112,11 @@ main {
     border-radius: 20px;
     box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
+
+main:hover{
+    box-shadow: 0 0 12px #C82617;
+}
+
 
 h2 {
     text-align: center;
@@ -119,7 +142,7 @@ table td:first-child {
     font-weight: bold;
 }
 
-.cabeça {
+.pergunta {
     background-color: #C82617;
     padding: 10px;
     border-radius: 10px;
@@ -130,23 +153,23 @@ table td:first-child {
 }
 
 button{
-    background-color: #C82617;
+    background-color: #00b1a2;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
     color: rgb(255, 214, 214);
+    border: none;
 }
-
 
 footer{
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #e9b600;
+    color: #350000;
     font-size: 10px;
-    background: linear-gradient(to right,#fff5dd,#ffeeb0);
+    background: linear-gradient(to right,#ffbbbb,#ff5656);
     padding: -100px;
 }
 
@@ -174,18 +197,6 @@ small{
     align-items: center;
     margin-left: 15px;
 }
-#resposta{
-    padding: 60px 20%;
-    border-radius: 50px;
-    all: unset;
-    border: 2px solid transparent;
-    box-shadow: 0px 2px 2px 2px #640109;
-    transition: border 0.3s ease-in-out;
-}
-
-.input:hover{
-    border: #ec4365;
-}
 
 .btn{
     background: #fff;
@@ -203,9 +214,10 @@ small{
     align-items: center;
     justify-content: left;
 }
+
 .btn:hover:not([disabled]){
-    background:#fff5be;
-    color:#e9b600;
+    background:#ffc0be;
+    
 }
 
 .btn:disabled{
@@ -239,5 +251,37 @@ small{
     font-family:  sans-serif;
     text-align: left;
     color: #ffffff;
+}
 
+.desabilidado{
+    display: none;
+}
+
+#resposta{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 99.5%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:  all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.IA{
+    background-color: #C82617;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    margin-left: 10px;
 }
