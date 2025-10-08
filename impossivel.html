@@ -11,33 +11,35 @@
 
 <body>
     <main>
-        <h1 class="cabeça">Sequência numérica</h1>
-        <br>
-        <h2 class="cabeça"> Questôes de Nível Impossivel: </h2><br>
-         <div class="quiz-container">
-    <h2 id="pergunta" class="cabeça"></h2><br><br>
-    <center>
-    <input type="text" id="resposta" placeholder="Digite sua resposta..."><br><br>
-    <button onclick="verificarResposta()">Enviar</button>
-    <div id="feedback" class="feedback"></div></center>
-  </div>
+        <h1 class="pergunta">Sequência numérica</h1><br>
+        <h2 class="pergunta"> Questôes de Nível Impossivel: </h2><br>
+        <h2 id="pergunta" class="pergunta"></h2><br><br>
+            <center>
+            <input type="text" id="resposta" placeholder="Digite sua resposta..."><br><br>
 
+            <nav id="" class="IA">
+                Agente de IA
+            </nav>
+            <br><br>
 
+            <button onclick="verificarResposta()">Enviar</button>
+
+            <div id="feedback" class="feedback"></div>
+            </center>
+
+    </main>
 
         <nav>
-            <a class="botao_link" href="Index.html"><span>Inicio</span></a>
-            <a class="botao_link" href="medio.html"><span>Médio</span></a>
-            <a class="botao_link" href="dificil.html"><span>Difícil</span></a>
-            <a class="botao_link" href="impossivel.html"><span>Impossível</span></a>
+            <a id="botao_menu" href="Index.html"><span>Inicio</span></a>
+            <a id="botao_nj" href="">Novo Jogo</a>
         </nav>
-        
-    </main>
+
     <footer>
+        <img src="img/onda_impossivel.svg">
         <small> &copy; Todos os direitos reservados aos alunos: Gustavo Godoy, Manuela Mari, Mariana Cariati, Pedro
             Castro e Sophia Bortoloto.</small>
     </footer>
     <script src="js/impossivel.js"> </script>
 </body>
-
 
 </html>
