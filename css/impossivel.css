@@ -18,7 +18,12 @@
 
 #botao_nj{
     background-color: var(--quinto-azul);
-    border-radius: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 8px 25px;
+    margin: 40px 15px;
+    border-radius: 10px;
+    color: white;
 }
 
 #botao_facil{
@@ -253,7 +258,7 @@ small{
     color: #ffffff;
 }
 
-.desabilidado{
+.desabilitado{
     display: none;
 }
 
