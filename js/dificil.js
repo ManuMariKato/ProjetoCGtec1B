@@ -49,6 +49,8 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const impossibleButton = document.getElementById("botao_impossivel");
+const bestResposta = document.getElementById("resposta");
+const enviarResposta = document.getElementById("enviarResposta");
 
 
 let currentQuestionIndex = 0;
@@ -64,6 +66,8 @@ function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Próximo";
+  bestResposta.classList.add("desabilitado");
+  enviarResposta.classList.add("desabilitado");
   showQuestion();
 }
 
@@ -73,7 +77,12 @@ function showQuestion() {
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-  currentQuestion.answers.forEach((answer) => {
+  if(currentQuestionIndex == 4){
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    
+
+  } else{
+    currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
     button.classList.add("btn");
@@ -83,6 +92,8 @@ function showQuestion() {
 
     button.addEventListener("click", selectAnswer);
   });
+  }
+  
 }
 
 function resetState() {
@@ -117,18 +128,26 @@ function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
   impossibleButton.style.display = "block";
+  bestResposta.classList.add("desabilitado");
+  enviarResposta.classList.add("desabilitado");
+  feedback.remove();
   impossibleButton.link("impossivel.html");
 }
 
 function handleNextButton() {
   currentQuestionIndex++;
+
+  if(currentQuestionIndex == 4){
+
+    showQuestion();
+    bestResposta.classList.remove("desabilitado");
+    enviarResposta.classList.remove("desabilitado");
+    verificarResposta();
+  }
+
   if (currentQuestionIndex < questions.length) {
     showQuestion();
   } 
-  else if(currentQuestionIndex == 4){
-    answerButtons.display.style = "none";
-    verificarResposta();
-  }
   else {
     showScore();
   }
@@ -136,7 +155,7 @@ function handleNextButton() {
 
 function verificarResposta() {
       const respostaUsuario = document.getElementById("resposta").value.trim();
-      const respostaCorreta = questions[4].answers;
+      const respostaCorreta = questions[currentQuestionIndex].answers;
       const feedback = document.getElementById("feedback");
 
       if (respostaUsuario === "") {
@@ -149,11 +168,13 @@ function verificarResposta() {
         feedback.textContent = "✅ Correto!";
         feedback.className = "feedback correto";
         score++
+        nextButton.style.display = "block";
       } else {
         feedback.textContent = "❌ Incorreto! A resposta correta é: " + respostaCorreta;
         feedback.className = "feedback incorreto";
+        nextButton.style.display = "block";
       }
-    nextButton.style.display = "block";
+    
 }
 
 nextButton.addEventListener("click", () => {

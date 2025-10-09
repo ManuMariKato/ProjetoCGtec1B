@@ -10,9 +10,13 @@ const questoes = [
     let indice = 0;
     let score = 0;
     let numeroMaximo = 5;
-    let list = [];
+    let perguntasSorteadas = [];
     let tmp;
+    const nextButton = document.getElementById("next-btn");
+    const responstaEnviar = document.getElementById("respostaEnviar");
+    const botaoNovamente = document.getElementById("botao_nj");
     let questoesAleatorias = gerarNumeroAleatorio();
+    const bestResposta = document.getElementById("resposta");
 
     //Função responsável por mostrar a questão atual na tela
     function carregarQuestao() {
@@ -22,6 +26,7 @@ const questoes = [
       document.getElementById("resposta").value = "";
       //limpa qualquer feedback anterior
       document.getElementById("feedback").textContent = "";
+      botaoNovamente.classList.add("desabilitado");
     }
 
     function mudarQuestao(){
@@ -49,20 +54,20 @@ const questoes = [
       }
     }
 
-   function gerarNumeroAleatorio(){
+function gerarNumeroAleatorio(){
     let numeroEscolhido = parseInt(Math.random() * numeroMaximo + 1);
-    let quantidadeDeElementosDaLista = list.length;
+    let quantidadeDeElementosDaLista = questoes.length;
 
     if(quantidadeDeElementosDaLista == numeroMaximo){
-        list= [];
+        perguntasSorteadas = [];
     }
 
-    if(list.includes(numeroEscolhido)){
+    if(perguntasSorteadas.includes(numeroEscolhido)){
         return gerarNumeroAleatorio();
     }
     else{
-        list.push(numeroEscolhido);
-        console.log(list);
+        perguntasSorteadas.push(numeroEscolhido);
+        console.log(perguntasSorteadas);
         return numeroEscolhido;
     }
 }
@@ -81,20 +86,24 @@ const questoes = [
       if (respostaUsuario === respostaCorreta) {
         feedback.textContent = "✅ Correto!";
         feedback.className = "feedback correto";
-
         score++
       } else {
         feedback.textContent = "❌ Incorreto! A resposta correta é: " + respostaCorreta;
         feedback.className = "feedback incorreto";
       }
       if (questoesAleatorias < questoes.length) {
-        document.querySelector(".quiz-container").innerHTML = 
+        mudarScore();
+      }
+    }
+
+    function mudarScore(){
+      document.getElementById("pergunta").innerHTML = 
           `<h2> Quiz finalizado!</h2><p>Você respondeu todas as questões.</p>
           <p>Sua pontuação foi de ${score} de 1</p>`;
-          
-      }
-      
-      
+      feedback.remove();
+      bestResposta.remove();
+      responstaEnviar.remove();
+      botaoNovamente.classList.remove("desabilitado");
     }
     console.log(questoesAleatorias);
     // Inicia a primeira questão
