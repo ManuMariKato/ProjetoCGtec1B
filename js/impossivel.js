@@ -118,8 +118,8 @@ function gerarNumeroAleatorio(){
       if (questoesAleatorias < questoes.length) {
         mudarScore();
       }
+      verificarComGemini(questoes[questoesAleatorias].pergunta, bestResposta);
     }
-
     function mudarScore(){
       document.getElementById("pergunta").innerHTML = 
           `<h2> Quiz finalizado!</h2><p>Você respondeu todas as questões.</p>
@@ -129,7 +129,72 @@ function gerarNumeroAleatorio(){
       responstaEnviar.remove();
       botaoNovamente.classList.remove("desabilitado");
     }
+async function verificarComGemini(pergunta, bestResposta) {
+  const iaResposta = document.getElementById("iaResposta");
+  
+  // Adiciona a classe 'mostrar' para exibir o nav
+  iaResposta.classList.add("mostrar");
+  iaResposta.textContent = "🔄 Consultando IA...";
+
+  // ⚠️ COLOQUE SUA CHAVE DA API AQUI
+  const API_KEY = "";
+  const MODEL = "gemini-2.0-flash-exp";
+
+  try {
+    // Obter a resposta correta
+    const respostaCorreta = questoes.find(q => q.pergunta === pergunta)?.resposta || "";
+    const respostaUsuario = bestResposta.value || "";
+
+    // Construir o prompt
+    const prompt = `Você é um professor de matemática especializado em sequências numéricas.
+
+Pergunta: ${pergunta}
+Resposta do aluno: ${respostaUsuario}
+Resposta correta: ${respostaCorreta}
+
+${respostaUsuario === respostaCorreta 
+  ? 'A resposta está CORRETA. Faça um elogio breve e explique resumidamente o padrão da sequência.' 
+  : 'A resposta está INCORRETA. Explique de forma clara e didática qual é o padrão da sequência e como chegar na resposta correta. Seja objetivo e use no máximo 4 linhas.'}`;
+
+    // Fazer requisição direta para o Gemini (sem backend)
+    const resposta = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: prompt
+            }]
+          }]
+        })
+      }
+    );
+
+    if (!resposta.ok) {
+      throw new Error(`Erro HTTP: ${resposta.status}`);
+    }
+
+    const data = await resposta.json();
+
+    // Extrair a explicação da resposta
+    const explicacao = data.candidates?.[0]?.content?.parts?.[0]?.text || 
+                       "⚠️ A IA não conseguiu gerar uma explicação.";
+
+    iaResposta.textContent = explicacao;
+
+  } catch (erro) {
+    console.error("Erro ao consultar a IA:", erro);
+    iaResposta.textContent = "⚠️ Erro ao se comunicar com a IA. Verifique sua conexão e chave da API.";
+  }
+}
+
     console.log(questoesAleatorias);
     // Inicia a primeira questão
     carregarQuestao();
+
+
 
