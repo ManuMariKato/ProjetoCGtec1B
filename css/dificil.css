@@ -239,3 +239,36 @@ small{
 .desabilitado{
     display: none;
 }
+
+#resposta{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 99.5%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:  all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#iaResposta {
+    background-color: #C82617;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    display: none; /* Começa escondido */
+    margin-left: 10px;
+}
+
+.IA.mostrar {
+    display: flex !important;
+}
