@@ -228,8 +228,8 @@ async function verificarComGemini(pergunta, bestResposta) {
   iaResposta.textContent = "🔄 Consultando IA...";
 
   // ⚠️ COLOQUE SUA CHAVE DA API AQUI
-  const API_KEY = "AIzaSyBxVZv5_QLr23Itm7IR0_Z85A-n7yiQfIA";
-  const MODEL = "gemini-2.0-flash-exp";
+  const API_KEY = "";
+  const MODEL = "gemini-2.5-flash";
 
   try {
     // Obter a resposta correta
@@ -286,4 +286,5 @@ ${respostaUsuario === respostaCorreta
     console.log(questoesAleatorias);
     // Inicia a primeira questão
     carregarQuestao();
+
 
