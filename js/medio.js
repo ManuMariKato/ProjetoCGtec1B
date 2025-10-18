@@ -38,16 +38,43 @@ const questions = [
       ]
     },
     {
+      question: "O 10º termo da sequência numérica: –2, 3, 8, 13, ... é",
+      answers: [
+        {id: 1, text: "A) 42", correct:false},
+        {id: 2, text: "B) 43", correct:true},
+        {id: 3, text: "C) 48", correct:false},
+        {id: 4, text: "D) 49", correct:false}
+      ]
+    },
+    {
+      question: "Qual é o 7º termo da sequência numérica, sendo ela: 4, 9, 14, 19, ...",
+      answers: [
+        {id: 1, text: "A) 29", correct:false},
+        {id: 2, text: "B) 30", correct:false},
+        {id: 3, text: "C) 31", correct:false},
+        {id: 4, text: "D) 34", correct:true}
+      ]
+    },
+    {
+      question: "Complete a sequência: <br> 1, 2, 6, 24, 120, ...",
+      answers: [
+        {id: 1, text: "A) 240", correct:false},
+        {id: 2, text: "B) 360", correct:false},
+        {id: 3, text: "C) 720", correct:true},
+        {id: 4, text: "D) 840", correct:false}
+      ]
+    },
+    {
       question: "Sequência: 1, ..., ..., ..., ... <br> cada termo é o número de divisores do termo anterior. Qual o 15º ?",
       answers: "1"
-    },
+    }
     
 ]
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const dificilButton = document.getElementById("botao_dificil");
-const bostaResposta = document.getElementById("resposta");
+const bestResposta = document.getElementById("resposta");
 const enviarResposta = document.getElementById("enviarResposta");
 
 let currentQuestionIndex = 0;
@@ -57,8 +84,8 @@ function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Próxima";
-  bostaResposta.classList.add("desabilidado");
-  enviarResposta.classList.add("desabilidado");
+  bestResposta.classList.add("desabilitado");
+  enviarResposta.classList.add("desabilitado");
   showQuestion();
 }
 
@@ -68,7 +95,7 @@ function showQuestion() {
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-  if(currentQuestionIndex == 4){
+  if(currentQuestionIndex == 7){
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
     
 
@@ -119,8 +146,8 @@ function selectAnswer(e) {
 function showScore() {
   resetState();
   questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
-  bostaResposta.classList.add("desabilidado");
-  enviarResposta.classList.add("desabilidado");
+  bestResposta.classList.add("desabilitado");
+  enviarResposta.classList.add("desabilitado");
   feedback.remove();
   dificilButton.style.display = "block";
   dificilButton.link("dificil.html");
@@ -131,16 +158,18 @@ function showScore() {
 function handleNextButton() {
   currentQuestionIndex++;
 
-  if(currentQuestionIndex == 4){
+  if(currentQuestionIndex == 7){
 
     showQuestion();
-    bostaResposta.classList.remove("desabilidado");
-    enviarResposta.classList.remove("desabilidado");
+    bestResposta.classList.remove("desabilitado");
+    enviarResposta.classList.remove("desabilitado");
+    feedback.display.remove("desabilitado");
     verificarResposta();
   }
 
   if (currentQuestionIndex < questions.length) {
     showQuestion();
+    feedback.display.add("desabilitado");
   } 
   else {
     showScore();

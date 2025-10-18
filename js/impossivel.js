@@ -75,6 +75,98 @@ const questoes = [
           carregarQuestao();
           verificarResposta();
           break;
+        case 6:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 8:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 9:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 10:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 11:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 12:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 13:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 14:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 15:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 16:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 17:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 18:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 19:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 20:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 21:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 22:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 23:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 24:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 25:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 26:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 27:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 28:
+          carregarQuestao();
+          verificarResposta();
+          break;
+        case 29:
+          carregarQuestao();
+          verificarResposta();
+          break;
       }
     }
 
@@ -124,7 +216,6 @@ function gerarNumeroAleatorio(){
       document.getElementById("pergunta").innerHTML = 
           `<h2> Quiz finalizado!</h2><p>Você respondeu todas as questões.</p>
           <p>Sua pontuação foi de ${score} de 1</p>`;
-      feedback.remove();
       bestResposta.remove();
       responstaEnviar.remove();
       botaoNovamente.classList.remove("desabilitado");
@@ -137,7 +228,7 @@ async function verificarComGemini(pergunta, bestResposta) {
   iaResposta.textContent = "🔄 Consultando IA...";
 
   // ⚠️ COLOQUE SUA CHAVE DA API AQUI
-  const API_KEY = "";
+  const API_KEY = "AIzaSyBxVZv5_QLr23Itm7IR0_Z85A-n7yiQfIA";
   const MODEL = "gemini-2.0-flash-exp";
 
   try {
@@ -146,7 +237,7 @@ async function verificarComGemini(pergunta, bestResposta) {
     const respostaUsuario = bestResposta.value || "";
 
     // Construir o prompt
-    const prompt = `Você é um professor de matemática especializado em sequências numéricas.
+    const prompt = `Você é um professor de matemática especializado em sequências numéricas, faça respostas curtas e objetivas com menos de um parágrafo. Coloque no começo da sua resposta 'Explicação: '.
 
 Pergunta: ${pergunta}
 Resposta do aluno: ${respostaUsuario}
@@ -195,6 +286,4 @@ ${respostaUsuario === respostaCorreta
     console.log(questoesAleatorias);
     // Inicia a primeira questão
     carregarQuestao();
-
-
 

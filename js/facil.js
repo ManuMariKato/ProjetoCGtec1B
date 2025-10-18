@@ -69,6 +69,16 @@ const questions = [
         ]
 
     },
+    {
+        question: "Qual termo vem antes de 64 na sequência: <br> 1, 8, ?, 64, 125, ...",
+        answers: [
+            {id: 1, text: "A) 16", correct:false},
+            {id: 2, text: "B) 27", correct:true},
+            {id: 3, text: "C) 32", correct:false},
+            {id: 4, text: "D) 48", correct:false}
+        ]
+
+    }
     
 ]
 const questionElement = document.getElementById("question");
@@ -155,5 +165,4 @@ nextButton.addEventListener("click", () => {
     startQuiz();
   }
 });
-
 startQuiz();

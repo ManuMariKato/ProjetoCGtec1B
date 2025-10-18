@@ -40,6 +40,36 @@ const questions = [
 
     },
     {
+        question: "Continue a sequência: 2, 3, 10, 39, 192, … ",
+        answers: [
+            {id: 1, text: "A) 1001", correct:false},
+            {id: 2, text: "B) 1008", correct:false},
+            {id: 3, text: "C) 1003", correct:true},
+            {id: 4, text: "D) 1005", correct:false}
+        ]
+
+    },
+    {
+        question: "Seguindo o padrão da sequência numérica, qual o número que falta na sequência abaixo: <br> 4, 16, … , 65536",
+        answers: [
+            {id: 1, text: "A) 256", correct:true},
+            {id: 2, text: "B) 1600", correct:false},
+            {id: 3, text: "C) 365", correct:false},
+            {id: 4, text: "D) 636", correct:false}
+        ]
+
+    },
+    {
+        question: "Seguindo o padrão da sequência numérica, complete a sequência: 1, 3, 7, 15, 31, …",
+        answers: [
+            {id: 1, text: "A) 71", correct:false},
+            {id: 2, text: "B) 63", correct:true},
+            {id: 3, text: "C) 55", correct:false},
+            {id: 4, text: "D) 47", correct:false}
+        ]
+
+    },
+    {
         question: "Dada a sequência 3, 6, 10, 15, 21, 28, 36,…, qual é o próximo número da sequência",
         answers: "45"
     }
@@ -77,7 +107,7 @@ function showQuestion() {
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-  if(currentQuestionIndex == 4){
+  if(currentQuestionIndex == 7){
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
     
 
@@ -137,16 +167,18 @@ function showScore() {
 function handleNextButton() {
   currentQuestionIndex++;
 
-  if(currentQuestionIndex == 4){
+  if(currentQuestionIndex == 7){
 
     showQuestion();
     bestResposta.classList.remove("desabilitado");
     enviarResposta.classList.remove("desabilitado");
+    feedback.display.remove("desabilitado");
     verificarResposta();
   }
 
   if (currentQuestionIndex < questions.length) {
     showQuestion();
+    feedback.display.add("desabilitado");
   } 
   else {
     showScore();
