@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 
 *{
@@ -54,7 +54,7 @@
 h1{
     font-size: 60px;
     color: white;
-    font-family: "Spicy Rice", 'Times New Roman', Times, serif;
+    font-family: "Poetsen One", 'Times New Roman', Times, serif;
     text-shadow: 5px 5px 5px rgb(159, 94, 20);
 }
 
@@ -153,6 +153,7 @@ footer{
     font-size: 10px;
     background: linear-gradient(to right,#ffe8cf,#f7c994);
     padding: -100px;
+    margin-top: 12%;
 }
 
 small{
@@ -240,35 +241,36 @@ small{
     display: none;
 }
 
-#resposta{
+input {
     background: #fff;
     color: #222;
     font-weight: 500;
     width: 99.5%;
     border: none;
     padding: 10px;
-    margin: 10px 0;
+    margin: 15px auto;
     text-align: left;
     border-radius: 4px;
     cursor: pointer;
     transition:  all 0.3s;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
-#iaResposta {
-    background-color: #C82617;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    color: white;
-    display: none; /* Começa escondido */
-    margin-left: 10px;
+#enviarResposta{
+    background:#ffd099;
+    color:#ff9100;
+    border: 1px dashed;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
 }
 
-.IA.mostrar {
-    display: flex !important;
+#enviarResposta:hover{
+    background:#ff9822;
+    color:#ffc170;
+    border: 1px solid;
+    cursor: pointer;
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Titan+One&display=swap');
 
 *{
     font-size: x-large;
@@ -55,7 +55,7 @@
 h1{
     font-size: 60px;
     color: white;
-    font-family: "Spicy Rice", 'Times New Roman', Times, serif;
+    font-family: "Poetsen One", 'Times New Roman', Times, serif;
     text-shadow: 5px 5px 5px #074f4a;
 }
 
@@ -153,6 +153,7 @@ footer{
     font-size: 10px;
     background: linear-gradient(to right,#bfd4d3,#0ad3c5);
     padding: -100px;
+    margin-top: 12%;
 }
 
 small{

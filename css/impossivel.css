@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Titan+One&display=swap');
 
@@ -18,12 +17,18 @@
 
 #botao_nj{
     background-color: var(--quinto-azul);
-    border-radius: 30px;
+    border-radius: 50px;
     text-decoration: none;
     padding: 8px 25px;
     margin: 40px 15px;
     border-radius: 10px;
     color: white;
+}
+
+#botao_nj:hover{
+    background-color: #880000 ;
+    color: rgb(255, 110, 110);
+    box-shadow: black;
 }
 
 #botao_facil{
@@ -98,7 +103,7 @@ nav {
 }
 
 nav:hover{
-    box-shadow: 0 0 12px #C82617;
+    box-shadow: 0 0 12px #3d0904;
 }
 
 nav a {
@@ -119,7 +124,7 @@ main {
 }
 
 main:hover{
-    box-shadow: 0 0 12px #C82617;
+    box-shadow: 0 0 12px #3d0904;
 }
 
 
@@ -158,14 +163,20 @@ table td:first-child {
 }
 
 button{
-    background-color: #00b1a2;
-    padding: 10px;
+    background:#C82617;
+    color:white;
+    border: 1px dashed;
     border-radius: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    color: rgb(255, 214, 214);
-    border: none;
+    padding: 10px 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+button:hover{
+    background:#6e0000;
+    color:#cf4242;
+    border: 2px solid;
+    cursor: pointer;
 }
 
 footer{
@@ -176,6 +187,7 @@ footer{
     font-size: 10px;
     background: linear-gradient(to right,#ffbbbb,#ff5656);
     padding: -100px;
+    margin-top: 12%;
 }
 
 small{
@@ -293,4 +305,18 @@ small{
 
 .IA.mostrar {
     display: flex !important;
+}
+
+#enviarResposta{
+    background:#4e0f1c;
+    color:white;
+    border: 1px dashed;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-bottom: 12px;
+}
+#enviarResposta:hover{
+    background:#e9b600;
+    color:#ffeca7;
+    border: 1px solid;
 }
